@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница Minecraft</title>
+    <style>
+        /* Общие стили для страницы */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Чтобы контент был в начале */
+            height: 100vh; /* Используем 100% высоты экрана */
+        }
+
+        /* Верхнее меню */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(33, 33, 33, 0.8);
+            color: #00C8FF;
+            font-size: 18px;
+            border-bottom: 2px solid #00C8FF;
+            animation: fadeIn 1s ease-out;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00C8FF;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        nav a:hover {
+            color: #00FFEF;
+            text-decoration: underline;
+        }
+
+        /* Основной контент */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: rgba(48, 48, 48, 0.7);
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            padding-bottom: 50px; /* Чтобы контент не перекрывался футером */
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Футер */
+        footer {
+            background-color: rgba(33, 33, 33, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 2px solid #00C8FF;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Снежинки */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            z-index: 9999;
+            font-size: 24px;
+            color: white;
+            user-select: none;
+            animation: snow 10s linear infinite, fadeIn 1s ease-out;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Кнопки */
+        .download-button,
+        .donate-button,
+        .buy-pass-button {
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .download-button {
+            background-color: #FF8C00;
+        }
+
+        .download-button:hover {
+            background-color: #FF7F32;
+        }
+
+        .donate-button {
+            background-color: #FFD700;
+        }
+
+        .donate-button:hover {
+            background-color: #FFC300;
+        }
+
+        .buy-pass-button {
+            background-color: #32CD32; /* Зеленый цвет */
+        }
+
+        .buy-pass-button:hover {
+            background-color: #28A745;
+        }
+
+        /* Текст перед двоеточием */
+        .minecraft-info h2 {
+            color: lightgray;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Убираем кнопку "Новое" из навигации */
+        nav a[href=""]:last-child {
+            display: none;
+        }
+
+        /* Заголовки в списке на темно-серый цвет */
+        .highlight {
+            color: #A9A9A9;
+        }
+
+        /* Для текста о BMG/H0ntE */
+        .creator-info {
+            color: #BEBEBE;
+            font-size: 14px;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Анимация для fadeIn */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <div class="icon">
+                <img src="img/diktafon.jpg" alt="Новая иконка" style="width: 50px; border-radius: 50%;">
+            </div>
+        </div>
+        <nav>
+            <a href="" data-aos="fade-right">Главная</a>
+            <a href="https://t.me/H0ntE" target="_blank" data-aos="fade-left">Контакт с нами</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 data-aos="fade-up">Добро пожаловать на наш сайтик!</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Приготовьтесь к лучшему приключению в Minecraft!</p>
+
+        <div class="minecraft-info">
+            <h2 data-aos="fade-up">Наша сборкачка Minecraft:</h2>
+            <p data-aos="fade-up" data-aos-delay="400">Наша сборка в Майнкрафт, сделана прекрасно, и множество крафтов изменены на это все только под конец сборки!</p>
+            <ul data-aos="fade-up" data-aos-delay="600">
+                <li><strong class="highlight">Захватывающие модификации:</strong> Каждый мод привносит что-то уникальное в игру.</li>
+                <li><strong class="highlight">Множество опций:</strong> Откройте для себя новые возможности и приключения!</li>
+                <li><strong class="highlight">Совместное времяпрепровождение:</strong> Создайте незабываемые моменты с друзьями.</li>
+                <li><strong class="">Возможность ознакомится с новыми модами, и новыми!</li>
+            </ul>
+        </div>
+
+        <a href="https://drive.google.com/uc?id=13k7dTN762TxbEFqQCmTQeZw0jwUvKWOV&export=download" class="download-button" target="_blank" data-aos="zoom-in">Скачать лаунчер Minecraft</a>
+        <a href="https://www.donationalerts.com/r/9BMG5" class="donate-button" target="_blank" data-aos="zoom-in" data-aos-delay="200">Поддержать проект</a>
+        <a href="https://example.com/buy-pass" class="buy-pass-button" target="_blank" data-aos="zoom-in" data-aos-delay="400">Купить проходку</a>
+    </main>
+
+    <footer>
+        <p>© Сайтик создан для ютубера DIKTAFON</p>
+        <div class="social-icons">
+            <a href="https://t.me/H0ntE" target="_blank" data-aos="fade-up">🕊️</a>
+            <a href="https://www.youtube.com" target="_blank" data-aos="fade-up" data-aos-delay="200">📺</a>
+        </div>
+
+        <p class="creator-info">Сайт был создан BMG (H0ntE).</p>
+    </footer>
+
+    <div class="snowflake" style="left: 10%; animation-duration: 12s; animation-delay: 0s;">❄</div>
+    <div class="snowflake" style="left: 20%; animation-duration: 15s; animation-delay: 2s;">❄</div>
+    <div class="snowflake" style="left: 30%; animation-duration: 14s; animation-delay: 4s;">❄</div>
+    <div class="snowflake" style="left: 40%; animation-duration: 17s; animation-delay: 1s;">❄</div>
+    <div class="snowflake" style="left: 50%; animation-duration: 10s; animation-delay: 3s;">❄</div>
+    <div class="snowflake" style="left: 60%; animation-duration: 12s; animation-delay: 5s;">❄</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
